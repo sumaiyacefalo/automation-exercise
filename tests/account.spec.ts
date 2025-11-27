@@ -90,6 +90,6 @@ test('Verify if account can be deleted after registration', async ({ page }) => 
 
 test('Verify if account can be deleted after login', async ({ page }) => {
     const navBarComponent = new NavbarComponent(page);
-    navBarComponent.login("Ilene.Kiehn-Weimann@yahoo.com", "testpassword");
+    await navBarComponent.login("Ilene.Kiehn-Weimann@yahoo.com", "testpassword");
     await navBarComponent.deleteAccount();
 })

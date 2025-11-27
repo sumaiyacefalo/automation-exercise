@@ -12,6 +12,7 @@ class ProductsPage {
     }
 
     async productDetails(){
+        await this.page.getByRole('link', { name: 'Write Your Review' }).first().click();
         await this.page.getByRole('textbox',{name:"Your Name"}).fill('Test');
         await this.page.getByRole('textbox',{name: "Email Address", exact: true}).fill('test@yopmail.com');
         await this.page.getByRole('textbox',{name:"Add Review Here!"}).fill("This review is for test purpose");

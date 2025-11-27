@@ -95,6 +95,11 @@ class NavbarComponent {
         await this.page.getByText('Proceed To Checkout').click();
         await this.page.getByRole('link', { name: 'Register / Login' }).click();
     }
+
+    async products() {
+        await this.page.getByRole('link', { name: 'Products' }).click();
+        await this.page.getByRole('heading', { name: 'All Products' }).waitFor();
+    }
 }
 
 export { NavbarComponent }
